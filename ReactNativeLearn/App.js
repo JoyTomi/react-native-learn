@@ -55,7 +55,13 @@ const TabNavigator = createBottomTabNavigator(
     书架: BookShelf,
     我的: Mine,
   },
-  //活动的第二页隐藏tabbar
+  {
+    tabBarOptions: {
+      activeTintColor: 'black',
+      inactiveTintColor: 'gray',
+    },
+  },
+  // //活动的第二页隐藏tabbar
   Activity.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true;
     if (navigation.state.index > 0) {
@@ -66,12 +72,9 @@ const TabNavigator = createBottomTabNavigator(
       // tabBarOnPress:(obj) => {
       //   alert('1')
       // },
-
+      
     };
   }
-
-
-
 );
  
 export default createAppContainer(TabNavigator);
