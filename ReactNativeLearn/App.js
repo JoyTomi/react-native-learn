@@ -63,9 +63,9 @@ const TabNavigator = createBottomTabNavigator(
     }
     return {
       tabBarVisible,
-      tabBarOnPress:(obj) => {
-        alert('1')
-      },
+      // tabBarOnPress:(obj) => {
+      //   alert('1')
+      // },
 
     };
   }

@@ -1,21 +1,11 @@
 import React from "react";
-import { Button,View, Text } from "react-native";
+import { View, Text } from "react-native";
 import { createStackNavigator } from "react-navigation";
-import {WebView} from "react-native-webview";
+import RNWebView from "./FuncListView/RNWebView"
+import { Button } from "react-native-elements";
 
 
-class MyWeb extends React.Component {
-  render() {
-    return (
-      <WebView
-        source={{uri: 'https://www.baidu.com'}}
-        style={{marginTop: 0}}
-      />
-    );
-  }
-}
-
-class FirstScreen extends React.Component {
+class FuncListView extends React.Component {
   static navigationOptions = {
     title: '活动'
   };
@@ -25,7 +15,7 @@ class FirstScreen extends React.Component {
         <Text>First Screen</Text>
         <Button
           title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Details')}
+          onPress={() => this.props.navigation.navigate("webView")}
         />
       </View>
     );
@@ -52,11 +42,14 @@ class DetailsScreen extends React.Component {
 
 const Activity = createStackNavigator({
   Home: {
-    screen: MyWeb,
+    screen: FuncListView,
   },
   Details: {
     screen: DetailsScreen,
   },
+  webView:{
+    screen:RNWebView,
+  }
 });
 
 export default Activity
