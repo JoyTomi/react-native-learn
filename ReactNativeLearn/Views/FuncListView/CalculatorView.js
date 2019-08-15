@@ -130,23 +130,23 @@ class CalculatorView extends React.Component {
                     <Text style={{fontSize:40}}>{this.state.displayValue}</Text>
                 </View>
                 <View>
-                    <ButtonGroup
+                <ButtonGroup containerStyle={{height:50}}
                         onPress={this.clickBtn1}
                         buttons={this.state.cnArray.slice(0,4)}
                     ></ButtonGroup>
-                    <ButtonGroup
+                    <ButtonGroup containerStyle={{marginTop:-11,height:50}}
                         onPress={this.clickBtn2}
                         buttons={this.state.cnArray.slice(4,8)}
                     ></ButtonGroup>
-                    <ButtonGroup
+                    <ButtonGroup containerStyle={{marginTop:-11,height:50}}
                         onPress={this.clickBtn3}
                         buttons={this.state.cnArray.slice(8,12)}
                     ></ButtonGroup>
-                    <ButtonGroup
+                    <ButtonGroup containerStyle={{marginTop:-11,height:50}}
                         onPress={this.clickBtn4}
                         buttons={this.state.cnArray.slice(12,16)}
                     ></ButtonGroup>
-                    <ButtonGroup
+                    <ButtonGroup containerStyle={{marginTop:-11,height:50}}
                         onPress={this.clickBtn5}
                         buttons={this.state.cnArray.slice(16,20)}
                     ></ButtonGroup>
