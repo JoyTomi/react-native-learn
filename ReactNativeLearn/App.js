@@ -1,5 +1,5 @@
 import React from "react";
-import { Button,View, Text,Icon } from "react-native";
+import { Button,View,Text } from "react-native";
 import { createBottomTabNavigator,createStackNavigator, createAppContainer } from "react-navigation";
 import Activity from "./Views/Activity"
 import Discovery from "./Views/Discovery"
