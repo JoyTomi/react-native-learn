@@ -1,15 +1,33 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation";
 import RNWebView from "./FuncListView/RNWebView"
-import { ListItem } from 'react-native-elements'
+import { ListItem, Button } from 'react-native-elements'
 import TouchableScale from "react-native-touchable-scale"; 
 import LinearGradient from "react-native-linear-gradient"; 
 import { ScrollView } from "react-native-gesture-handler";
 import SwiperViews from "./FuncListView/SwiperView"
+import ImagePickerView from "./FuncListView/ImagePickerView"
+import TeasetUIView from "./FuncListView/TeasetUI"
+import TriangleView from "./FuncListView/TriangleView"
+import BaseAnimateView from "./FuncListView/BaseAnimateView"
+import CalculatorView from "./FuncListView/CalculatorView"
+import ReduxView from "./FuncListView/ReduxView";
+import ReduxView2 from "./FuncListView/ReduxView2"
+
 
 class FuncListView extends React.Component {
   static navigationOptions = {
-    title: '活动'
+    title: '活动',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: 'black',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerLeft: <Button title="LeftBar"/>,
+    headerRight: <Button title="RightBar"/>,
+    headerBar:<Button title="RightBar"/>,
   };
   render() {
     const list = [
@@ -20,15 +38,57 @@ class FuncListView extends React.Component {
         viewName:"WebView"
       },
       {
-        title: 'react-native-element',
-        subtitle: 'flight-takeoff',
+        title: '轮播图',
+        subtitle: 'react-native-swiper',
         head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
         viewName:"SwiperView"
       },
+      {
+        title: '相机相册',
+        subtitle: 'react-native-image-picker',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"ImagePicker"
+      },
+      {
+        title: 'TeasetUI',
+        subtitle: 'teaset',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"TeasetUI"
+      },
+      {
+        title: '三角形',
+        subtitle: 'react-native-triangle',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Triangle"
+      },
+      {
+        title: '基础动画',
+        subtitle: 'Animated',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"BaseAnimate"
+      },
+      {
+        title: '计算器',
+        subtitle: 'Calculator',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Calculator"
+      },
+      {
+        title: 'Redux',
+        subtitle: 'redux',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Redux"
+      },
+      {
+        title: 'Redux2',
+        subtitle: 'redux2',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Redux2"
+      }
     ]
     
     return (
-      <ScrollView>
+      <ScrollView style={{backgroundColor:"#F8F8F8"}}>
           {
             list.map((item, i) => (
               <ListItem
@@ -42,7 +102,7 @@ class FuncListView extends React.Component {
                   end: {x:0,y:1}
                 }}
                 ViewComponent={LinearGradient} 
-                badge={{ value: 3, textStyle: { color: 'white' } }}
+                badge={{ value: i + 1, textStyle: { color: 'white' },width:40}}
                 key={i}
                 title={item.title}
                 titleStyle={{color:'white'}}
@@ -66,7 +126,45 @@ const Activity = createStackNavigator({
   WebView:{
     screen:RNWebView,
   },
-  SwiperView:SwiperViews
-});
+  SwiperView:{
+    screen:SwiperViews
+  },
+  ImagePicker:{
+    screen:ImagePickerView
+  },
+  TeasetUI:{
+    screen:TeasetUIView
+  },
+  Triangle:{
+    screen:TriangleView
+  },
+  BaseAnimate:{
+    screen:BaseAnimateView
+  },
+  Calculator:{
+    screen:CalculatorView
+  },
+  Redux:{
+    screen:ReduxView
+  },
+  Redux2:{
+    screen:ReduxView2
+  }
+},
+{
+  /* The header config from HomeScreen is now here */
+  initialRouteName: 'Home',
+  /* 设置默认导航啦 */
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+    fontWeight: 'bold',
+    }, 
+  }
+}
+);
 
 export default Activity

@@ -8,7 +8,6 @@ import {ButtonGroup} from "react-native-elements"
 class CalculatorView extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             cnArray : ['(',')','%','C','7','8','9','/','4','5','6','*','1','2','3','-','0','.','=','+'],
             lastInput:null,
