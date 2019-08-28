@@ -18,7 +18,7 @@ import ReduxView2 from "./FuncListView/ReduxView2";
 import *as wechat from 'react-native-wechat';
 import WechatView from './FuncListView/WechatView';
 import CalendarsView from './FuncListView/CalendarsView';
-
+import BridgeView from './FuncListView/BridgeView';
 
 class FuncListView extends React.Component {
 
@@ -107,6 +107,12 @@ componentDidMount (){
         subtitle: 'CalendarsView',
         head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
         viewName:"Calendars"
+      },
+      {
+        title: 'Bridge',
+        subtitle: 'BridgeView',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Bridge"
       }
     ]
     
@@ -178,6 +184,9 @@ const Activity = createStackNavigator({
   },
   Calendars:{
     screen:CalendarsView
+  },
+  Bridge:{
+    screen:BridgeView
   }
 },
 {
