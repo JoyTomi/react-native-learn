@@ -1,21 +1,32 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation";
-import RNWebView from "./FuncListView/RNWebView"
-import { ListItem, Button } from 'react-native-elements'
+import RNWebView from "./FuncListView/RNWebView";
+import { ListItem, Button } from 'react-native-elements';
 import TouchableScale from "react-native-touchable-scale"; 
 import LinearGradient from "react-native-linear-gradient"; 
 import { ScrollView } from "react-native-gesture-handler";
-import SwiperViews from "./FuncListView/SwiperView"
-import ImagePickerView from "./FuncListView/ImagePickerView"
-import TeasetUIView from "./FuncListView/TeasetUI"
-import TriangleView from "./FuncListView/TriangleView"
-import BaseAnimateView from "./FuncListView/BaseAnimateView"
-import CalculatorView from "./FuncListView/CalculatorView"
+import SwiperViews from "./FuncListView/SwiperView";
+import ImagePickerView from "./FuncListView/ImagePickerView";
+import TeasetUIView from "./FuncListView/TeasetUI";
+import TriangleView from "./FuncListView/TriangleView";
+import BaseAnimateView from "./FuncListView/BaseAnimateView";
+import CalculatorView from "./FuncListView/CalculatorView";
 import ReduxView from "./FuncListView/ReduxView";
-import ReduxView2 from "./FuncListView/ReduxView2"
+import ReduxView2 from "./FuncListView/ReduxView2";
+//建议在应用启动时初始化，初始化之前无法使用此模块的其他方法。WeChat模块只需要初始化一次。
+//const wechat = require('react-native-wechat')
+import *as wechat from 'react-native-wechat';
+import WechatView from './FuncListView/WechatView';
+import CalendarsView from './FuncListView/CalendarsView';
 
 
 class FuncListView extends React.Component {
+
+ // If you register here
+componentDidMount (){
+  wechat.registerApp('wxe3bad9733a77379e')
+}
+
   static navigationOptions = {
     title: '活动',
     headerStyle: {
@@ -84,6 +95,18 @@ class FuncListView extends React.Component {
         subtitle: 'redux2',
         head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
         viewName:"Redux2"
+      },
+      {
+        title: 'Wechat',
+        subtitle: 'wechat',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Wechat"
+      },
+      {
+        title: 'CalendarsView',
+        subtitle: 'CalendarsView',
+        head_url:"http://b-ssl.duitang.com/uploads/item/201811/04/20181104074412_wcelx.jpg",
+        viewName:"Calendars"
       }
     ]
     
@@ -149,6 +172,12 @@ const Activity = createStackNavigator({
   },
   Redux2:{
     screen:ReduxView2
+  },
+  Wechat:{
+    screen:WechatView
+  },
+  Calendars:{
+    screen:CalendarsView
   }
 },
 {

@@ -17,6 +17,11 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeLearnTests.m */; };
+		59D58424230BCDDE00B58DE9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D58423230BCDDE00B58DE9 /* SystemConfiguration.framework */; };
+		59D58426230BCDF300B58DE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D58425230BCDF300B58DE9 /* CoreTelephony.framework */; };
+		59D58428230BCDFB00B58DE9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D58427230BCDFB00B58DE9 /* libsqlite3.0.tbd */; };
+		59D5842A230BCE0700B58DE9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D58429230BCE0700B58DE9 /* libc++.tbd */; };
+		59D5842C230BCE1200B58DE9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D5842B230BCE1200B58DE9 /* libz.tbd */; };
 		C7BBE8BC0097735A3A0E9AFC /* libPods-ReactNativeLearn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 155A6C971125A412EEA339D6 /* libPods-ReactNativeLearn-tvOSTests.a */; };
 		CB89A608EEDD36F9EFEA7A18 /* libPods-ReactNativeLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B94CB53217CB05F38E34D7E9 /* libPods-ReactNativeLearnTests.a */; };
 		FE2777FE82663B9DA9C2968E /* libPods-ReactNativeLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D0CB7045B18942189D3EFE /* libPods-ReactNativeLearn.a */; };
@@ -59,6 +64,11 @@
 		394341A6AFBD48F635C3F99E /* Pods-ReactNativeLearn-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeLearn-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeLearn-tvOS/Pods-ReactNativeLearn-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		40D0CB7045B18942189D3EFE /* libPods-ReactNativeLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8BD795A2E2334E5ECBF116 /* Pods-ReactNativeLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeLearn.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeLearn/Pods-ReactNativeLearn.debug.xcconfig"; sourceTree = "<group>"; };
+		59D58423230BCDDE00B58DE9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		59D58425230BCDF300B58DE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		59D58427230BCDFB00B58DE9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		59D58429230BCE0700B58DE9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		59D5842B230BCE1200B58DE9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B1DE637C537608C8E4964D1 /* Pods-ReactNativeLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeLearn.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeLearn/Pods-ReactNativeLearn.release.xcconfig"; sourceTree = "<group>"; };
 		A626E6DA0E0347560598B9D6 /* Pods-ReactNativeLearn-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeLearn-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeLearn-tvOS/Pods-ReactNativeLearn-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B94CB53217CB05F38E34D7E9 /* libPods-ReactNativeLearnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeLearnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D5842C230BCE1200B58DE9 /* libz.tbd in Frameworks */,
+				59D5842A230BCE0700B58DE9 /* libc++.tbd in Frameworks */,
+				59D58428230BCDFB00B58DE9 /* libsqlite3.0.tbd in Frameworks */,
+				59D58426230BCDF300B58DE9 /* CoreTelephony.framework in Frameworks */,
+				59D58424230BCDDE00B58DE9 /* SystemConfiguration.framework in Frameworks */,
 				FE2777FE82663B9DA9C2968E /* libPods-ReactNativeLearn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,11 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59D5842B230BCE1200B58DE9 /* libz.tbd */,
+				59D58429230BCE0700B58DE9 /* libc++.tbd */,
+				59D58427230BCDFB00B58DE9 /* libsqlite3.0.tbd */,
+				59D58425230BCDF300B58DE9 /* CoreTelephony.framework */,
+				59D58423230BCDDE00B58DE9 /* SystemConfiguration.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				40D0CB7045B18942189D3EFE /* libPods-ReactNativeLearn.a */,
@@ -690,6 +710,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 8W234NQNE5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReactNativeLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -713,6 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8W234NQNE5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReactNativeLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
